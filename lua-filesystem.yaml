@@ -1,0 +1,4 @@
+version-ctrl: github
+src_repo: keplerproject/luafilesystem
+tag_prefix: ^v
+seperator: .
