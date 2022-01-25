@@ -3,8 +3,8 @@
 %{!?luaver: %global luaver %(lua -e "print(string.sub(_VERSION, 5))" || echo 0)}
 
 Name:           lua-filesystem
-Version:        1.6.3
-Release:        11
+Version:        1.8.0
+Release:        1
 Summary:        File System Library for the Lua Programming Language
 License:        MIT
 URL:            https://keplerproject.github.io/luafilesystem/
@@ -48,6 +48,9 @@ LUA_CPATH=$RPM_BUILD_ROOT%{_libdir}/lua/%{luaver}/\?.so lua tests/test.lua
 %doc doc/us/{d,e,i,lua,m}*
 
 %changelog
+* Thu Jan 20 2022 SimpleUpdate Robot <tc@openeuler.org> - 1.8.0-1
+- Upgrade to version 1.8.0
+
 * Fri Aug 7 2020 shenyangyang <shenyangyang4@huawei.com> - 1.6.3-11
 - Add a macro for upgrade of lua
 
