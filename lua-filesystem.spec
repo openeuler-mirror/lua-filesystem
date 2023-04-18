@@ -4,11 +4,12 @@
 
 Name:           lua-filesystem
 Version:        1.8.0
-Release:        1
+Release:        2
 Summary:        File System Library for the Lua Programming Language
 License:        MIT
 URL:            https://keplerproject.github.io/luafilesystem/
 Source0:        https://github.com/keplerproject/luafilesystem/archive/%{commit}/luafilesystem-%{version}.tar.gz
+Patch1:         fix-cc.patch
 
 BuildRequires:  gcc lua-devel >= 5.3
 Requires:       lua >= 5.3
@@ -48,6 +49,9 @@ LUA_CPATH=$RPM_BUILD_ROOT%{_libdir}/lua/%{luaver}/\?.so lua tests/test.lua
 %doc doc/us/{d,e,i,lua,m}*
 
 %changelog
+* Tue Apr 18 2023 yoo <hlefthleft@gmail.com> - 1.8.0-1
+- Fix CC compiler support
+
 * Thu Jan 20 2022 SimpleUpdate Robot <tc@openeuler.org> - 1.8.0-1
 - Upgrade to version 1.8.0
 

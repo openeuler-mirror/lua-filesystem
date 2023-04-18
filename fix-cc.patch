@@ -1,0 +1,11 @@
+diff -u -r luafilesystem-8014725009e195ffb502bcd65ca4e93b60a1b21c/config luafilesystem-8014725009e195ffb502bcd65ca4e93b60a1b21c/config
+--- luafilesystem-8014725009e195ffb502bcd65ca4e93b60a1b21c/config	2015-01-16 02:58:20.000000000 +0800
++++ luafilesystem-8014725009e195ffb502bcd65ca4e93b60a1b21c/config	2023-04-17 20:46:35.000000000 +0800
+@@ -19,6 +19,6 @@
+ WARN= -O2 -Wall -fPIC -W -Waggregate-return -Wcast-align -Wmissing-prototypes -Wnested-externs -Wshadow -Wwrite-strings -pedantic
+ INCS= -I$(LUA_INC)
+ CFLAGS= $(WARN) $(INCS)
+-CC= gcc
++CC ?= gcc
+ 
+ # $Id: config,v 1.21 2007/10/27 22:42:32 carregal Exp $
